@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Оформлення замовлення{% endblock %}
+
+{% block content %}
+  <div class="section">
+    <h2>Оформити замовлення</h2>
+    <form method="POST">
+      <input type="text" name="name" placeholder="Ваше ім’я" required><br>
+      <input type="tel" name="phone" placeholder="Номер телефону" required><br>
+      <input type="text" name="product" placeholder="Назва товару" value="{{ request.args.get('product', '') }}" required><br>
+      <button type="submit">Підтвердити</button>
+    </form>
+  </div>
+{% endblock %}
